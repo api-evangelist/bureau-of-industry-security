@@ -73,6 +73,8 @@ apis:
       online system for applying for export licenses, classifications, and
       authorizations under the Export Administration Regulations (EAR).
 common:
+  - type: LinkedIn
+    url: https://www.linkedin.com/company/bureau-of-industry-and-security-u-s-department-of-commerce
   - type: Website
     url: https://www.bis.gov
   - type: PrivacyPolicy

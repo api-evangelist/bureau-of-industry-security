@@ -1,0 +1,404 @@
+{
+  "item": [
+    {
+      "id": "732a2c7d-c219-4e79-bad6-1edef3047ef8",
+      "name": "Search",
+      "description": {
+        "content": "Search the Consolidated Screening List",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "71fd850f-56ef-42a8-9fd9-48fac49f31c9",
+          "name": "Search the Consolidated Screening List",
+          "request": {
+            "name": "Search the Consolidated Screening List",
+            "description": {
+              "content": "Search across all entries on the Consolidated Screening List.\nReturns matching parties with name, addresses, country, source\nlist, and remarks. Supports fuzzy name matching.\n",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "search"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "name",
+                  "value": "<string>",
+                  "description": "Name of an individual or entity to search for."
+                },
+                {
+                  "disabled": false,
+                  "key": "fuzzy_name",
+                  "value": "false",
+                  "description": "When true, applies fuzzy name matching."
+                },
+                {
+                  "disabled": false,
+                  "key": "sources",
+                  "value": "<string>",
+                  "description": "Comma-separated list of source list codes (e.g., SDN, EL, DPL)."
+                },
+                {
+                  "disabled": false,
+                  "key": "types",
+                  "value": "<string>",
+                  "description": "Comma-separated list of party types (Individual, Entity, Vessel, Aircraft)."
+                },
+                {
+                  "disabled": false,
+                  "key": "countries",
+                  "value": "<string>",
+                  "description": "Comma-separated list of ISO 3166-1 alpha-2 country codes."
+                },
+                {
+                  "disabled": false,
+                  "key": "address",
+                  "value": "<string>",
+                  "description": "Street address fragment to search."
+                },
+                {
+                  "disabled": false,
+                  "key": "city",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "state",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "postal_code",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "size",
+                  "value": "10",
+                  "description": "Number of results to return (max 100)."
+                },
+                {
+                  "disabled": false,
+                  "key": "offset",
+                  "value": "0",
+                  "description": "Result offset for pagination."
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "898152bb-0e74-400b-b772-510388e1b824",
+              "name": "Search results",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "search"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "name",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "fuzzy_name",
+                      "value": "false"
+                    },
+                    {
+                      "key": "sources",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "types",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "countries",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "address",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "city",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "state",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "postal_code",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "size",
+                      "value": "10"
+                    },
+                    {
+                      "key": "offset",
+                      "value": "0"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "subscription-key",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"total\": 6598,\n  \"sources_used\": [\n    {\n      \"source\": \"string\",\n      \"source_last_updated\": \"1976-08-28T21:21:45.773Z\",\n      \"import_rate\": \"string\"\n    },\n    {\n      \"source\": \"string\",\n      \"source_last_updated\": \"1952-12-21T22:34:05.304Z\",\n      \"import_rate\": \"string\"\n    }\n  ],\n  \"results\": [\n    {\n      \"id\": \"string\",\n      \"source\": \"string\",\n      \"entity_number\": 3988,\n      \"type\": \"string\",\n      \"name\": \"string\",\n      \"alt_names\": [\n        \"string\",\n        \"string\"\n      ],\n      \"addresses\": [\n        {\n          \"address\": \"string\",\n          \"city\": \"string\",\n          \"state_or_province\": \"string\",\n          \"postal_code\": \"string\",\n          \"country\": \"string\"\n        },\n        {\n          \"address\": \"string\",\n          \"city\": \"string\",\n          \"state_or_province\": \"string\",\n          \"postal_code\": \"string\",\n          \"country\": \"string\"\n        }\n      ],\n      \"federal_register_notice\": \"string\",\n      \"start_date\": \"1970-06-29\",\n      \"end_date\": \"1952-02-25\",\n      \"standard_order\": \"string\",\n      \"license_requirement\": \"string\",\n      \"license_policy\": \"string\",\n      \"title\": \"string\",\n      \"call_sign\": \"string\",\n      \"vessel_type\": \"string\",\n      \"gross_tonnage\": \"string\",\n      \"gross_registered_tonnage\": \"string\",\n      \"vessel_flag\": \"string\",\n      \"vessel_owner\": \"string\",\n      \"remarks\": \"string\",\n      \"source_list_url\": \"https://SlbNZJolPDcpxnaaLmlNEqniN.exIpgw6jjdOGxzVWz\",\n      \"source_information_url\": \"https://REyQTLz.rjjinuzsSSXfaikN-NmULwYJramh8cK+LoMFwmj-595Aw1\",\n      \"ids\": [\n        {\n          \"type\": \"string\",\n          \"number\": \"string\",\n          \"country\": \"string\",\n          \"issue_date\": \"1976-01-13\",\n          \"expiration_date\": \"2022-10-09\"\n        },\n        {\n          \"type\": \"string\",\n          \"number\": \"string\",\n          \"country\": \"string\",\n          \"issue_date\": \"1960-09-04\",\n          \"expiration_date\": \"2000-06-23\"\n        }\n      ],\n      \"nationalities\": [\n        \"string\",\n        \"string\"\n      ],\n      \"citizenships\": [\n        \"string\",\n        \"string\"\n      ],\n      \"dates_of_birth\": [\n        \"string\",\n        \"string\"\n      ],\n      \"places_of_birth\": [\n        \"string\",\n        \"string\"\n      ]\n    },\n    {\n      \"id\": \"string\",\n      \"source\": \"string\",\n      \"entity_number\": 5803,\n      \"type\": \"string\",\n      \"name\": \"string\",\n      \"alt_names\": [\n        \"string\",\n        \"string\"\n      ],\n      \"addresses\": [\n        {\n          \"address\": \"string\",\n          \"city\": \"string\",\n          \"state_or_province\": \"string\",\n          \"postal_code\": \"string\",\n          \"country\": \"string\"\n        },\n        {\n          \"address\": \"string\",\n          \"city\": \"string\",\n          \"state_or_province\": \"string\",\n          \"postal_code\": \"string\",\n          \"country\": \"string\"\n        }\n      ],\n      \"federal_register_notice\": \"string\",\n      \"start_date\": \"1962-08-26\",\n      \"end_date\": \"2003-03-28\",\n      \"standard_order\": \"string\",\n      \"license_requirement\": \"string\",\n      \"license_policy\": \"string\",\n      \"title\": \"string\",\n      \"call_sign\": \"string\",\n      \"vessel_type\": \"string\",\n      \"gross_tonnage\": \"string\",\n      \"gross_registered_tonnage\": \"string\",\n      \"vessel_flag\": \"string\",\n      \"vessel_owner\": \"string\",\n      \"remarks\": \"string\",\n      \"source_list_url\": \"https://L.kfrfv05znhnv5yYEXv33.g,VKeCfhZLnlEN1FA7I4DD+X2oYDEBmzX22gez5RM3pG\",\n      \"source_information_url\": \"https://cMZczaLyTEZdCqPdyfTsdH.bhblj-I8+Kz0eZ35viWdD,.4lSrR8T.IHhUd6nyKktteG\",\n      \"ids\": [\n        {\n          \"type\": \"string\",\n          \"number\": \"string\",\n          \"country\": \"string\",\n          \"issue_date\": \"1997-07-30\",\n          \"expiration_date\": \"1960-09-10\"\n        },\n        {\n          \"type\": \"string\",\n          \"number\": \"string\",\n          \"country\": \"string\",\n          \"issue_date\": \"1985-09-28\",\n          \"expiration_date\": \"2015-10-25\"\n        }\n      ],\n      \"nationalities\": [\n        \"string\",\n        \"string\"\n      ],\n      \"citizenships\": [\n        \"string\",\n        \"string\"\n      ],\n      \"dates_of_birth\": [\n        \"string\",\n        \"string\"\n      ],\n      \"places_of_birth\": [\n        \"string\",\n        \"string\"\n      ]\n    }\n  ]\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "53716d16-285b-4df8-a6ae-8e433d2e2ec0",
+              "name": "Missing or invalid subscription-key.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "search"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "name",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "fuzzy_name",
+                      "value": "false"
+                    },
+                    {
+                      "key": "sources",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "types",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "countries",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "address",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "city",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "state",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "postal_code",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "size",
+                      "value": "10"
+                    },
+                    {
+                      "key": "offset",
+                      "value": "0"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "subscription-key",
+                    "value": "<API Key>"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Unauthorized",
+              "code": 401,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "58144d63-1d15-4e4d-8f3d-06637f84c307",
+              "name": "Rate limit exceeded.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "search"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "name",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "fuzzy_name",
+                      "value": "false"
+                    },
+                    {
+                      "key": "sources",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "types",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "countries",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "address",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "city",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "state",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "postal_code",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "size",
+                      "value": "10"
+                    },
+                    {
+                      "key": "offset",
+                      "value": "0"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "subscription-key",
+                    "value": "<API Key>"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Too Many Requests",
+              "code": 429,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://data.trade.gov/consolidated_screening_list/v1",
+      "key": "baseUrl"
+    }
+  ],
+  "auth": {
+    "type": "apikey",
+    "apikey": [
+      {
+        "key": "key",
+        "value": "subscription-key"
+      },
+      {
+        "key": "value",
+        "value": "{{apiKey}}"
+      },
+      {
+        "key": "in",
+        "value": "header"
+      }
+    ]
+  },
+  "info": {
+    "_postman_id": "a4a31167-5e93-48ad-87e4-752ff7ef52ce",
+    "name": "Consolidated Screening List (CSL) API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "The Consolidated Screening List (CSL) is a consolidation of multiple\nexport screening lists from the U.S. Departments of Commerce, State,\nand Treasury that companies must check when conducting due diligence\non potential trade partners. This API provides programmatic access\nvia the International Trade Administration's developer.trade.gov\nData Services Platform.\n\nAuthentication is via a `subscription-key` request header obtained\nby registering an application on developer.trade.gov.\n\n\nContact Support:\n Name: ITA Developer Portal",
+      "type": "text/plain"
+    }
+  }
+}

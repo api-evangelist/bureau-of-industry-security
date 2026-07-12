@@ -73,6 +73,10 @@ apis:
       online system for applying for export licenses, classifications, and
       authorizations under the Export Administration Regulations (EAR).
 common:
+  - type: DomainSecurity
+    url: security/bureau-of-industry-security-domain-security.yml
+  - type: Authentication
+    url: authentication/bureau-of-industry-security-authentication.yml
   - type: LinkedIn
     url: https://www.linkedin.com/company/bureau-of-industry-and-security-u-s-department-of-commerce
   - type: Website

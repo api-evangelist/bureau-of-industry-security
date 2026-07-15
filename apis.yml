@@ -73,6 +73,8 @@ apis:
       online system for applying for export licenses, classifications, and
       authorizations under the Export Administration Regulations (EAR).
 common:
+  - type: AgenticAccess
+    url: agentic-access/bureau-of-industry-security-agentic-access.yml
   - type: DomainSecurity
     url: security/bureau-of-industry-security-domain-security.yml
   - type: Authentication
